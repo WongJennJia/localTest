@@ -1,26 +1,26 @@
 {
-    "house": {
-        "audio": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/h/hou/house/house__gb_3.mp3",
-        "ipa": "/haʊs/"
+    "sport": {
+        "audio": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/spo/sport/sport__gb_1.mp3",
+        "ipa": "/spɔːt/"
     },
-    "bathroom": {
-        "audio": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/b/bat/bathr/bathroom__gb_1.mp3",
-        "ipa": "/ˈbɑːθruːm/"
+    "learn": {
+        "audio": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/l/lea/learn/learn__gb_1.mp3",
+        "ipa": "/lɜːn/"
     },
-    "bedroom": {
-        "audio": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/b/bed/bedro/bedroom__gb_1.mp3",
-        "ipa": "/ˈbedruːm/"
+    "unhealthy": {
+        "audio": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/u/unh/unhea/unhealthy__gb_1.mp3",
+        "ipa": "/ʌnˈhelθi/"
     },
-    "living room": {
-        "audio": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/l/liv/livin/living_room_1_gb_1.mp3",
-        "ipa": "/ˈlɪvɪŋ ruːm/"
+    "survey": {
+        "audio": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/sur/surve/survey__gb_4.mp3",
+        "ipa": "/ˈsɜːveɪ/"
     },
-    "hall": {
-        "audio": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/h/hal/hall_/hall__gb_2.mp3",
-        "ipa": "/hɔːl/"
+    "hours": {
+        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/c/cbe/cbedu/cbeduk04952.mp3",
+        "ipa": "/aʊərz/"
     },
-    "dining room": {
-        "audio": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/d/din/dinin/dining_room_1_gb_1.mp3",
-        "ipa": "/ˈdaɪnɪŋ ruːm/"
+    "read": {
+        "audio": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/r/rea/read_/read__gb_1.mp3",
+        "ipa": "/riːd/"
     }
 }
