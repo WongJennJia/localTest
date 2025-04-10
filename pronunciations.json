@@ -1,0 +1,26 @@
+{
+    "house": {
+        "audio": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/h/hou/house/house__gb_3.mp3",
+        "ipa": "/haʊs/"
+    },
+    "bathroom": {
+        "audio": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/b/bat/bathr/bathroom__gb_1.mp3",
+        "ipa": "/ˈbɑːθruːm/"
+    },
+    "bedroom": {
+        "audio": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/b/bed/bedro/bedroom__gb_1.mp3",
+        "ipa": "/ˈbedruːm/"
+    },
+    "living room": {
+        "audio": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/l/liv/livin/living_room_1_gb_1.mp3",
+        "ipa": "/ˈlɪvɪŋ ruːm/"
+    },
+    "hall": {
+        "audio": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/h/hal/hall_/hall__gb_2.mp3",
+        "ipa": "/hɔːl/"
+    },
+    "dining room": {
+        "audio": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/d/din/dinin/dining_room_1_gb_1.mp3",
+        "ipa": "/ˈdaɪnɪŋ ruːm/"
+    }
+}

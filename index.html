@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Phonics Practice</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 30px;
+      background-color: #f0f8ff;
+    }
+    .word-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .word-box {
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .word {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    .ipa {
+      color: #555;
+      font-size: 1.1em;
+    }
+    button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .number {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-right: 10px;
+      color: #333;
+    }
+
+    /* Styling for the h1 header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      font-size: 3.5em;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Dynamically display the current day and date -->
+  <div class="header">
+    <span id="day"></span> <!-- Day on the left -->
+    <span id="category">Spelling 7</span> <!-- Category in the center -->
+    <span id="date"></span> <!-- Date on the right -->
+  </div>
+
+  <div class="word-list" id="word-list">
+    <!-- Words will be inserted dynamically here -->
+  </div>
+
+  <script>
+    // Fetch pronunciations from the JSON file
+    fetch('pronunciations.json')
+      .then(response => response.json())
+      .then(data => {
+        const wordListContainer = document.getElementById('word-list');
+
+        // Loop through each word in the JSON data
+        let index = 1;
+        for (const [word, pronunciation] of Object.entries(data)) {
+          // Create a new word box for each word
+          const wordBox = document.createElement('div');
+          wordBox.classList.add('word-box');
+          
+          // Create the word element
+          const wordElement = document.createElement('div');
+          wordElement.classList.add('word');
+          wordElement.innerHTML = `<span class="number">${index}.</span> ${word}`;
+          
+          // Create the IPA element
+          const ipaElement = document.createElement('div');
+          ipaElement.classList.add('ipa');
+          ipaElement.textContent = pronunciation.ipa;
+          
+          // Create the audio player
+          const audioElement = document.createElement('audio');
+          audioElement.id = word;
+          audioElement.src = pronunciation.audio;
+          
+          // Create the play button
+          const playButton = document.createElement('button');
+          playButton.textContent = "🔊 Play";
+          playButton.onclick = () => audioElement.play();
+          
+          // Append elements to the word box
+          wordBox.appendChild(wordElement);
+          wordBox.appendChild(ipaElement);
+          wordBox.appendChild(audioElement);
+          wordBox.appendChild(playButton);
+          
+          // Append the word box to the word list container
+          wordListContainer.appendChild(wordBox);
+          
+          // Increment the index for the next word
+          index++;
+        }
+      })
+      .catch(error => {
+        console.error("Error loading pronunciations:", error);
+      });
+
+    // Get today's date and day dynamically
+    const today = new Date();
+    const dayOfWeek = today.toLocaleString('en-US', { weekday: 'long' }); // Gets the day name (e.g., Thursday)
+    const dateString = today.toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' }); // Formats the date as "10 April 2025"
+
+    // Insert the day and date into the HTML
+    document.getElementById('day').textContent = dayOfWeek;
+    document.getElementById('date').textContent = dateString;
+  </script>
+</body>
+</html>
